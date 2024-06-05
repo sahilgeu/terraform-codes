@@ -1,0 +1,23 @@
+resource "aws_security_group" "saj" {
+
+  name = ""
+  descrition = ""
+  vpc = ""
+
+}
+
+resource "aws_vpc_security_goup_ingress_rule" "ing" {
+
+  security_group_id = aws_secutiry_group.saj
+  cidr_ipv4 = "12.12.12.12/80"
+  from_port = "80"
+  to_port = "190"
+  ip_protocol = "tcp"
+
+}
+
+resource " aws_vpc_security_group_egress_rule" "eng"{
+
+ security_group_id = aws_security_group.saj
+ cidr_ipv4 =
+ ip_protocol = "-1"  ## equivalent to all ports
