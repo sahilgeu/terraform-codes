@@ -1,0 +1,13 @@
+resource "aws_eip" "els" {
+
+  vpc = true ## eip is associate with vpc
+  vpc = defaukt ## eip is associate with default vpc
+  instance = aws_instance.example.id
+
+}
+
+resource "aws_eip" "lbs" {
+
+  insatnce = aws_instance.exmaple.id
+}
+
