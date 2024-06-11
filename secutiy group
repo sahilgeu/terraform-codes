@@ -2,7 +2,7 @@ resource "aws_security_group" "saj" {
 
   name = ""
   descrition = ""
-  vpc = ""
+  vpc = "" or vpc_id = ""
 
 }
 
